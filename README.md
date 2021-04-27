@@ -1,3 +1,3 @@
 # Kickstarter Ethereum Smart Contract Project
 
-## Created with a React Next JS Front End
+<span style="color:grey">Created with a React Next JS Front End</span>
