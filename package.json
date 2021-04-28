@@ -11,7 +11,8 @@
     "test": "mocha",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
