@@ -71,7 +71,7 @@ const RequestNew = ({ campaignAddress }) => {
 
         <Message error header='Oops!' content={errorMessage} />
         <Button primary loading={loading}>
-          Create!
+          Create
         </Button>
       </Form>
     </Layout>

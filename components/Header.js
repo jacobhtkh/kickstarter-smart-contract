@@ -14,7 +14,7 @@ const Header = () => {
           <a className='item'>Campaigns</a>
         </Link>
         <Link href='/campaigns/new'>
-          <a className='item'>+</a>
+          <a className='item'>Create a campaign</a>
         </Link>
       </Menu.Menu>
     </Menu>

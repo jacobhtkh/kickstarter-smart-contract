@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Table } from 'semantic-ui-react';
+import { Button, Table, Icon, Grid } from 'semantic-ui-react';
 import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import Campaign from '../../../ethereum/campaign';
@@ -29,10 +29,48 @@ const RequestIndex = ({
 
   return (
     <Layout>
-      <h3>Requests</h3>
-
       <Table>
         <Header>
+          <Row>
+            <HeaderCell colSpan='5'>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <span>
+                  <h3>Requests</h3>
+                </span>
+                <span
+                  style={{
+                    marginLeft: 5,
+                    fontWeight: 'normal',
+                    fontSize: '16px',
+                  }}
+                >
+                  ({requestCount})
+                </span>
+              </div>
+            </HeaderCell>
+
+            <HeaderCell colSpan='2'>
+              <Link
+                href='/campaigns/[campaignAddress]/requests/new'
+                as={`/campaigns/${campaignAddress}/requests/new`}
+              >
+                <a>
+                  <Button
+                    primary
+                    floated='right'
+                    style={{ marginRight: 20, width: 90 }}
+                  >
+                    New
+                  </Button>
+                </a>
+              </Link>
+            </HeaderCell>
+          </Row>
           <Row>
             <HeaderCell>ID</HeaderCell>
             <HeaderCell>Description</HeaderCell>
@@ -46,19 +84,6 @@ const RequestIndex = ({
 
         <Body>{renderRows()}</Body>
       </Table>
-      <div>
-        Found {requestCount} requests.
-        <Link
-          href='/campaigns/[campaignAddress]/requests/new'
-          as={`/campaigns/${campaignAddress}/requests/new`}
-        >
-          <a>
-            <Button primary floated='right'>
-              Add Request
-            </Button>
-          </a>
-        </Link>
-      </div>
     </Layout>
   );
 };

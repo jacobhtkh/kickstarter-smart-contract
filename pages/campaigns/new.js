@@ -47,7 +47,7 @@ const CampaignNew = () => {
 
         <Message error header='Oops!' content={errorMessage} />
         <Button loading={loading} primary>
-          Create!
+          Create
         </Button>
       </Form>
     </Layout>

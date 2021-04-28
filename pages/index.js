@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useEffect, useState } from 'react';
 
-import { Card, Button } from 'semantic-ui-react';
+import { Card, Button, Grid } from 'semantic-ui-react';
 import factory from '../ethereum/factory';
 import Layout from '../components/Layout';
 import Link from 'next/link';
@@ -48,19 +48,25 @@ const CampaignIndex = ({ campaigns }) => {
       <div>
         <h3>Open Campaigns</h3>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          {renderCampaigns()}
-          <Link href='/campaigns/new'>
-            <a>
-              <Button
-                floated='right'
-                content='Create Campaign'
-                icon='add circle'
-                primary
-              />
-            </a>
-          </Link>
-        </div>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column>{renderCampaigns()}</Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column>
+              <Link href='/campaigns/new'>
+                <a>
+                  <Button
+                    content='Create a Campaign'
+                    // icon='add circle'
+                    primary
+                  />
+                </a>
+              </Link>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     </Layout>
   );
