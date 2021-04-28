@@ -1,7 +1,10 @@
 {
   "name": "kickstart",
   "version": "1.0.0",
-  "description": "",
+  "description": "A version of kickstarter using smart contracts",
+  "engines": {
+    "node": "15.x"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha",
