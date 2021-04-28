@@ -54,7 +54,7 @@ const CampaignShow = ({
 
   return (
     <Layout>
-      <h3>Campaign Show</h3>
+      <h3>Campaign Details</h3>
       <Grid>
         <Grid.Row>
           <Grid.Column width={10}>{renderCards()}</Grid.Column>
