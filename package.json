@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A version of kickstarter using smart contracts",
   "engines": {
-    "node": "15.x"
+    "node": "15.x",
+    "npm": "7.x"
   },
   "main": "index.js",
   "scripts": {
